@@ -1,0 +1,2 @@
+name="Pratik"
+echo $name
