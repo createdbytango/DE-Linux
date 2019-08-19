@@ -1,0 +1,82 @@
+#Basic Shell Commands
+
+read varname [more vars]
+-or-
+read -p "prompt" varname [more vars]
+#last variable gets rest of the input
+
+
+read -p "enter your name: " first last
+echo "First Name: $first"
+echo "Last Name: $last"
+
+
+#
+    $0      Name of the current shell script.
+    $1-$9   Positional parameters 1 through 9.
+    $#      The number of positional parameters.
+    $*      All positional parameters, "$*" is one string.
+    $@      All positional parameters, "$@" is a set of strings.
+    $?      Return status of most recently executed command.
+    $$      Process id of current process.
+#
+
+
+Q: W.A.S. which displays all the command prompt arguments, given to a script.
+#hint: "$*".
+A: echo $@
+
+
+#syntax of if
+if command
+then
+    statements
+fi
+
+
+-or-
+
+if [condition]; then
+    statements
+else
+    statements
+fi
+
+
+-or-
+
+if [condition]; then
+    statements
+elif [condition]; then
+    statements
+else
+    statements
+fi
+#What we learnt here was that elif does not require a fi, but all if requires a fi.
+
+
+#
+    -gt     greater than
+    -lt     less than
+#
+
+#
+    &&      AND     iff they're enclosed within [[]]
+    ||      or      iff they're enclosed within [[]]
+#
+
+
+
+#
+    -d      true if file is a directory.
+    -f      true if file is ordinary file.
+    -r      true if file is readable.
+    -w      true if file is writeable.
+    -x      true if file is executable.
+    -s      true if length of file is non-zero.
+#
+Q: W.A.S. which displays the permissions of the file.
+A: 
+
+
+##Case Statement
