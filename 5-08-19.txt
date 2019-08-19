@@ -1,0 +1,66 @@
+ls -l => list files in long length format
+
+total 9 columns, and 1st column represents permissions
+
+
+
+b -> block special file
+c -> character special file
+d -> directory file
+- -> ordinary file
+l -> symbolic link
+s -> socket
+p -> named pipe
+
+
+ls | wc => here | is anonymous pipe, not a named pipe
+
+What are meta characters/WildCard Characters?
+
+=> * and ? , where * stands for multiple characters, and ? stands for a single character
+
+Example: ls ch*.doc, it means doc file which starts with "ch"
+
+Hidden Files?
+
+=> Files starting with a '.'. Unix programs use most of these files for storing config files
+=> ls -a is used to display hidden files
+=> ex: .profile file is used to store initialization script of bourne shell, .kshrc => korn shell initialization script, .cshrc => initializaiton script for cshell
+=> Bourne Shell is of 2 types : Korn and Bash (Bourne Again SHell)
+
+cd ~ : home directory
+
+Absolute Path: Path shown right from the root
+
+Relative Path: Path relative from the present working directory
+
+pwd: present working directory
+
+642 => 110 100 010
+
+rw- r-- -w-
+user group other
+
+
+Changing permissions:
+
+chmod o+wx <filename>
+
+chmod u-x <filename> (withdraw exec permission from user)
+
+chmod g-rw <filename> (withdraw read/write from group)
+
+Changing Owner: chown command is used
+Syntax: chown <username> <filename>
+
+chgrp: Changing Group
+Syntax: chgrp <group> <filename>
+
+PATH stores the path of executable files in it which needs to be accessed globally from anywhere
+
+
+
+
+
+
+
