@@ -104,3 +104,14 @@ do
 done
 ```
 __A:__
+# 3. Shell Functions
+* must be defined before they can be referenced.
+* Usually placed at the beginning of the script.
+```bash
+function-name () {
+    statements
+}
+```
+>:pushpin: Define the fucntion first before calling it.
+
+__Q:__ Write a function to add two numbers.
