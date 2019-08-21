@@ -77,6 +77,25 @@ __Q:__ W.A.S. to check whether the number is a prime number or not.
 
 __A:__
 ```bash
+read -p "Enter a number: " number
+let i=2
+let flag=0
+while [ $i -lt $number ]
+do
+        let rem=`expr $number % $i`
+        if [ $rem -eq 0 ]
+        then
+                let flag=1
+                break
+        fi
+        let i+=1
+done
+if [ $flag -eq 0 ]
+then
+        echo Prime
+else
+        echo Not Prime
+fi
 ```
 # 2. The CONTINUE command
 ```bash
