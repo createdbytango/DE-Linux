@@ -1,0 +1,39 @@
+Understanding Linux File System:
+
+Types of files:
+
+Directories
+Special file - mechanism used for I/O. /dev holds special files
+Links - way to make file or directory visible in multiple parts of the os
+Sockets - Provides inter process networking such as TCP/IP
+Pipes - allows IPC
+
+/bin - binary
+/sbin - system binaries
+/etc - Contains system-wide config files
+/opt - cntains third party packages
+/media - mount point for removable media
+/boot - Holds files required in os boot
+/dev - device files
+
+touch -> changes file's timestamps and creates a new file if one doesnt exist
+
+Components:
+
+1) the boot block - contains small boot program
+2) the super block - contains global information about the filesystem
+3) the inode block - Contains a table for every file of the system. All 
+		     attributes of a file and directory are stored in this area
+		     except the name of the file and the actual data. 
+4) the data block - Contains all data and programs created by user reside 
+		    in this area
+
+THe file system layout
+
+	| |Boot block| super block | Inode| |data block| |blocks| |
+
+
+Q) Make a program of swapping two variables without using third variable 
+in shell
+
+
