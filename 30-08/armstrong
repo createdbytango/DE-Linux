@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -p "Enter a number: " n
+num=$n
+sum=0
+while [ $num -ne 0 ]; do
+    let dig=$num%10
+    let cube=$dig*$dig*$dig
+    let sum=sum+cube
+    let num=$num/10
+done
+if [ $sum -eq $n ]; then
+    echo "Armstrong Number"
+else
+    echo "Not armstrong"
+fi
+
