@@ -35,6 +35,23 @@ done
 ```
 > :pushpin: what we learn here is that `$@` or `$*` wasn't necessary.
 
+__C style loop__
+```bash
+for ((i = 1; i<=10; i++)); do
+    echo $i
+done
+```
+__Loops for ranges__
+```bash
+for i in {1..10}; do
+    echo $i
+done
+
+for i in {A..Z}; do
+    echo $i
+done
+```
+
 # 3. Select Loop ?
 
 * Constructs a somple menu from word list.
@@ -133,4 +150,34 @@ function-name () {
 ```
 >:pushpin: Define the fucntion first before calling it.
 
+* You can use ```return``` to break out of funtion
+
+```bash
+# Define Function
+sayHello() {
+    echo "Hello"
+    
+    # Return returns an exit status number between 0 - 255
+    return
+}
+
+# Calling funtion
+sayHello
+```
+
 __Q:__ Write a function to add two numbers.
+
+* To recieve parameters in funtion use $1-$9.
+* To return a value from a funtion use echo.
+```bash
+getSum() {
+    num1=$1
+    num2=$2
+    echo $((num1+num2))
+}
+
+# To pass arguments to funtion write argument list after funtion call.
+read -p "Enter 2 numbers: " a b
+sum=$(getSum a b)
+echo "$a + $b = $sum"
+```
