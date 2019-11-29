@@ -1,0 +1,4 @@
+name="Ned"
+
+echo $name
+
